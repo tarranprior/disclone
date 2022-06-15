@@ -1,0 +1,6 @@
+{
+    "configuration": {
+        "activity": "Rclone",
+        "prefix": ">"
+    }
+}
