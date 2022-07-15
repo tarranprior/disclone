@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Executables
+gclone.exe
+rclone.exe
+
+# Accounts
+!/accounts
+/accounts/*
+!/accounts/.gitkeep

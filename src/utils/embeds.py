@@ -1,6 +1,7 @@
 import disnake
 from disnake.ui import Button, Select, View
 
+
 class EmbedFactory:
     def __init__(
             self,

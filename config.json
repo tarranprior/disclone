@@ -1,6 +1,7 @@
 {
     "configuration": {
         "activity": "Rclone",
-        "prefix": ">"
+        "prefix": ">",
+        "default_destination": ""
     }
 }

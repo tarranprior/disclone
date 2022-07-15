@@ -19,7 +19,9 @@ if __name__ == '__main__':
     )
 
 bot.load_extensions(exts=[
-    'cogs.developer_tools.purge'
+    'cogs.developer.purge',
+    'cogs.utilities.copy',
+    'cogs.utilities.remotes'
 ])
 
 bot.run(env['BOT_TOKEN'])

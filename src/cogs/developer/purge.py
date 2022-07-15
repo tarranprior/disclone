@@ -7,6 +7,7 @@ from disnake import ApplicationCommandInteraction, Option, OptionType
 from templates.bot import Bot
 from utils import *
 
+
 class Purge(commands.Cog, name='purge'):
     def __init__(self, bot: Bot) -> None:
         self.bot = bot
@@ -41,7 +42,7 @@ class Purge(commands.Cog, name='purge'):
     @commands.is_owner()
     async def purge_slash(self, inter: ApplicationCommandInteraction, number: int):
         messages = await inter.channel.purge(limit=int(number))
-        await inter.send(f'{len(messages)} messages have been purged.')
+        await inter.response.send_message(f'{len(messages)} messages have been purged.')
         await asyncio.sleep(1)
         await inter.delete_original_message()
 

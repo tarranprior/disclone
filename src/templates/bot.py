@@ -6,6 +6,8 @@ from disnake.ext import commands, tasks
 from disnake import ApplicationCommandInteraction
 
 from utils import *
+from exceptions import *
+
 
 class Bot(commands.Bot):
     def __init__(self, config = None, *args, **kwargs) -> None:
@@ -27,14 +29,14 @@ class Bot(commands.Bot):
         logger.info(f'{count} extension(s) have loaded successfully.\n')
 
     async def on_connect(self) -> None:
-        logger.success('Bot is connected to the gateway.')
+        logger.success('Disclone is connected to the gateway.')
         logger.info(f'Connected to {len(self.guilds)} guild(s.)')
         logger.info(f'Logged in as {self.user.name} ({self.user.id})')
         logger.info(f'API Version: {disnake.__version__}')
         logger.info(f'Platform: {platform.system()} {platform.release()} {os.name}\n')
 
     async def on_ready(self) -> None:
-        logger.success('Bot is ready.')
+        logger.success('Disclone is ready.')
         logger.info('For more information on usage, see the README.')
 
     async def on_command_error(self, ctx: disnake.ext.commands.Context, error) -> None:
@@ -43,11 +45,24 @@ class Bot(commands.Bot):
 
         elif isinstance(error, commands.errors.MissingRequiredArgument):
             embed = EmbedFactory().create(title='Missing Required Argument', description=f"{str(error).capitalize()}\nFor more information on usage and parameters, use `{load_configuration()['configuration']['prefix']}help <command>`.", colour=disnake.Colour.red())
-            return await ctx.reply(embed=embed)
+            return await ctx.send(embed=embed)
         
+        elif isinstance(error, commands.errors.CommandInvokeError):
+
+            if 'GcloneError' in str(error.__str__()):
+                embed = EmbedFactory().create(title='Gclone Error', description=str("An error has occured during this operation."), colour=disnake.Colour.red())
+                embed.add_field(name="Error Message", value=f"```{error.__cause__}```", inline=False)
+                return await ctx.send(embed=embed)
+
         logger.error(f'Ignoring exception in command {ctx.command}: {error}')
 
     async def on_slash_command_error(self, inter: ApplicationCommandInteraction, error) -> None:
+        if isinstance(error, commands.errors.CommandInvokeError):
+            if 'GcloneError' in str(error.__str__()):
+                embed = EmbedFactory().create(title='Gclone Error', description=str("An error has occured during this operation."), colour=disnake.Colour.red())
+                embed.add_field(name="Error Message", value=f"```{error.__cause__}```", inline=False)
+                return await inter.edit_original_message(embed=embed)
+
         logger.error(f'Ignoring exception in slash command {inter.application_command.name}: {error}')
 
     @tasks.loop(minutes=10.0)
