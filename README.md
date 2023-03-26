@@ -7,28 +7,30 @@
 ## Introduction
 For cloning all the things!
 
-Gclone is an moderation of Rclone, and allows users to bypass [Google Drive](https://www.google.co.uk/drive/)'s daily limit by utilising and cycling through hundred(s) of service accounts (by default, this tool generates 100 accounts - equal to a `75TB` daily quota.)
+Gclone is a moderation of Rclone, a command-line program to manage files on cloud storage, and allows users to easily bypass [Google Drive](https://www.google.co.uk/drive/)'s daily data transfer limits by utilising and cycling through hundreds of service accounts.
 
-Disclone brings this to [Discord](https://discord.com/) for easy and collaborative management, and combines all Google Drive features (plus more) into an AIO bot.
+Disclone brings this to [Discord](https://discord.com/), and allows for easy and collaborative management, combining all of Google Drive features and more, into an AIO tool.
+
+By default, this tool will generate one hundred accounts, which is equal to approx. **75TB** of daily quota.
 
 ## Disclaimer
 This tool was made for educational purposes.
 
 ## Features
 - [ ] Rclone Utilities:
-    - [ ] **New**: Create a new Google Drive remote
-    - [X] **List**: List all existing remotes
-    - [ ] **Mkdir**: Make a path (directory) if it doesn't already exist
+    - [ ] **new**: Create a new Google Drive remote
+    - [X] **list**: List all existing remotes
+    - [ ] **mkdir**: Make a path (directory) if it doesn't already exist
 
 - [ ] Gclone Utilities:
-    - [X] **Clone**: Copy all files from source to destination (skipping identical files)
-    - [ ] **Move**: Move all files from source to destination
-    - [ ] **Sync**: Sync all files from source to destination
-    - [ ] **MD5**: Produces MD5 file hashes for all files in a directory
-    - [ ] **Empty**: Delete all files in a directory
-    - [ ] **Dedupe**: Remove duplicate files in a directory
-    - [ ] **Clean**: Remove any empty directories
-    - [ ] **Remove**: Remove a directory (and all files inside)
+    - [X] **clone**: Copy all files from source to destination (skipping identical files)
+    - [ ] **move**: Move all files from source to destination
+    - [ ] **sync**: Sync all files from source to destination
+    - [ ] **md5**: Produces MD5 file hashes for all files in a directory
+    - [ ] **empty**: Delete all files in a directory
+    - [ ] **dedupe**: Remove duplicate files in a directory
+    - [ ] **clean**: Remove any empty directories
+    - [ ] **remove**: Remove a directory (and all files inside)
 
 ## Prerequisites
 - Python 3.8 +
