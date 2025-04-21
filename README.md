@@ -4,9 +4,16 @@
 <p align="center">Disclone is a self-host bot which uses Rclone/Gclone integration for collaborative Google Drive automation.</p>
 <p align="center">Note: This project is still in early development.</p>
 
+<div align="center">
+
 ![GitHub License](https://img.shields.io/github/license/tarranprior/disclone)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/tarranprior/disclone)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tarranprior/disclone)
+![GitHub forks](https://img.shields.io/github/forks/tarranprior/disclone)
+![GitHub Repo stars](https://img.shields.io/github/stars/tarranprior/disclone)
+![GitHub watchers](https://img.shields.io/github/watchers/tarranprior/disclone)
+
+</div>
 
 ## Introduction
 For cloning all the things!
