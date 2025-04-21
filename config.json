@@ -1,7 +1,6 @@
 {
     "configuration": {
-        "activity": "Rclone",
-        "prefix": ">",
+        "activity": "Google Drive",
         "default_destination": ""
     }
 }
