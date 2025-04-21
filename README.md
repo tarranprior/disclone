@@ -5,6 +5,8 @@
 <p align="center">Note: This project is still in early development.</p>
 
 ![GitHub License](https://img.shields.io/github/license/tarranprior/disclone)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/tarranprior/disclone)
+![GitHub repo size](https://img.shields.io/github/repo-size/tarranprior/disclone)
 
 ## Introduction
 For cloning all the things!
