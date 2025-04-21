@@ -136,3 +136,6 @@ rclone.exe
 !/accounts
 /accounts/*
 !/accounts/.gitkeep
+
+# Rclone Configuration
+rclone.conf
