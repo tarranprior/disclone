@@ -34,7 +34,7 @@ This tool was made for educational purposes.
     - [ ] `/mkdir`: Creates a new directory if it doesn't already exist
 
 - [ ] Gclone Utilities:
-    - [X] `/clone`: Copies all files from source to destination (skipping identical files)
+    - [X] `/copy`: Copies all files from source to destination (skipping identical files)
     - [ ] `/move`: Moves all files from source to destination
     - [ ] `/sync`: Syncs all files from source to destination
     - [ ] `/md5`: Produces MD5 file hashes for all files in a directory
@@ -45,8 +45,8 @@ This tool was made for educational purposes.
 
 ## Prerequisites
 - Python 3.8 +
-- [Poetry](https://python-poetry.org/docs) (or the [pip](https://pypi.org/project/pip/) package management tool.)
-- Service accounts (for Google Drive)
+- [Poetry](https://python-poetry.org/docs) (or the [pip](https://pypi.org/project/pip/) package management tool).
+- Service accounts (for Google Drive).
 - `rclone.exe` and `gclone.exe` executable files.
 
 ## Tools
